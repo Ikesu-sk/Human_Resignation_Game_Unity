@@ -1,12 +1,14 @@
-# プロジェクト名
-簡単な概要。何をするものか。
+# Human_Resignation_Game_Unityfeature/2025-08-06
+2025年8月6日時点でのunityの進捗
 
-## 概要
-aaaaaaaaaaaaaaa
+## このデータの進捗状況
+📺 [【Unity】１時間でノベルゲームを作ろう！！]([https://www.youtube.com/watch?v=-U0c5l9K5XE](https://www.youtube.com/watch?v=MCnYgVw3Xq8&t=3285s))
+こちらの動画を参考にノベルゲーム風のUIとシステムを作成。中身は動画内のものとほぼ同一。
 
 ## インストール方法
-git clone https://github.com/Ikesu-sk/リポジトリ名.git
-cd リポジトリ名
+https://github.com/Ikesu-sk/Human_Resignation_Game_Unity.git
+cd Human_Resignation_Game_Unity-feature-2025-08-06
 
-### 🧪 4. 使い方（How to Use）
-aaaaaaaaaaaaaaa
+### 使い方（How to Use）
+インストールしたディレクトリをunity hubで開く。
+開いた後、Assets > Scenes > Main を開けば参考動画と同じような画面が出てくる。
