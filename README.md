@@ -7,9 +7,8 @@
 
 ## インストール方法
 ```bash
-git https://github.com/Ikesu-sk/Human_Resignation_Game_Unity.git
-cd Human_Resignation_Game_Unity-feature-2025-08-06
+git clone https://github.com/Ikesu-sk/Human_Resignation_Game_Unity.git
 ```
 ### 使い方（How to Use）
-インストールしたディレクトリをunity hubで開く。
+インストールしたディレクトリ(Human_Resignation_Game_Unity)をunity hubで開く。
 開いた後、Assets > Scenes > Main を開けば参考動画と同じような画面が出てくる。
