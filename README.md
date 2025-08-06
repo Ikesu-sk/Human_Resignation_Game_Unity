@@ -2,7 +2,7 @@
 2025年8月6日時点でのunityの進捗
 
 ## このデータの進捗状況
-📺 [【Unity】１時間でノベルゲームを作ろう！！]([https://www.youtube.com/watch?v=-U0c5l9K5XE](https://www.youtube.com/watch?v=MCnYgVw3Xq8&t=3285s))
+[📺 [【Unity】１時間でノベルゲームを作ろう！！]](https://www.youtube.com/watch?v=MCnYgVw3Xq8&t=3285s)
 こちらの動画を参考にノベルゲーム風のUIとシステムを作成。中身は動画内のものとほぼ同一。
 
 ## インストール方法
