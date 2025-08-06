@@ -7,6 +7,7 @@
 
 ## インストール方法
 https://github.com/Ikesu-sk/Human_Resignation_Game_Unity.git
+
 cd Human_Resignation_Game_Unity-feature-2025-08-06
 
 ### 使い方（How to Use）
