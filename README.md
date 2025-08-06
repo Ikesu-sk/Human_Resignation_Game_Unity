@@ -11,4 +11,4 @@ git clone https://github.com/Ikesu-sk/Human_Resignation_Game_Unity.git
 ```
 ### 使い方（How to Use）
 インストールしたディレクトリ`Human_Resignation_Game_Unity`をunity hubで開く。
-開いた後、Assets > Scenes > Main を開けば参考動画と同じような画面が出てくる。
+その後、Assets > Scenes > Main を開けば参考動画と同じような画面が出てくる。
