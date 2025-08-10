@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stories:
   - Background: {fileID: -3745511083504267619, guid: b72d8c55942d8e649b8c7169b761a303, type: 3}
-    CharacterImage: {fileID: 2253678213444760981, guid: 65b64a879bb3693479ae11ad454e5352, type: 3}
+    CharacterImage: {fileID: 0}
     StoryText: "\u3044\u3064\u307E\u3067\u93E1\u3092\u898B\u3066\u304A\u308B\u306E\u3058\u3083"
     CharacterName: "\u304A\u3058\u3044\u3061\u3083\u3093"
   - Background: {fileID: -3745511083504267619, guid: b72d8c55942d8e649b8c7169b761a303, type: 3}
@@ -24,5 +24,9 @@ MonoBehaviour:
   - Background: {fileID: -3745511083504267619, guid: b72d8c55942d8e649b8c7169b761a303, type: 3}
     CharacterImage: {fileID: 2253678213444760981, guid: 65b64a879bb3693479ae11ad454e5352, type: 3}
     StoryText: "\u6C17\u5206\u306F\u3069\u3046\u3058\u3083"
+    CharacterName: "\u304A\u3058\u3044\u3061\u3083\u3093"
+  - Background: {fileID: -3745511083504267619, guid: b72d8c55942d8e649b8c7169b761a303, type: 3}
+    CharacterImage: {fileID: 2253678213444760981, guid: 65b64a879bb3693479ae11ad454e5352, type: 3}
+    StoryText: "\u3042\u3081\u3093\u307C\u3042\u304B\u3044\u306A\u3042\u3044\u3046\u3048\u304A\u3046\u304D\u3082\u306B\u3053\u3048\u3073\u3082\u304A\u3088\u3044\u3067\u308B"
     CharacterName: "\u304A\u3058\u3044\u3061\u3083\u3093"
   bgm: 0
