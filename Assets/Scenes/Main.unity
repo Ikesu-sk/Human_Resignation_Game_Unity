@@ -319,7 +319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c929e3b52a3bbd34db072508d74fc3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webcamDisplay: {fileID: 1856741871}
 --- !u!1 &877656593
 GameObject:
   m_ObjectHideFlags: 1
@@ -329,7 +328,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 877656595}
-  - component: {fileID: 877656594}
   m_Layer: 0
   m_Name: _FungusState
   m_TagString: Untagged
@@ -337,18 +335,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &877656594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877656593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &877656595
 Transform:
   m_ObjectHideFlags: 1
@@ -868,6 +854,7 @@ GameObject:
   - component: {fileID: 1622281512}
   - component: {fileID: 1622281511}
   - component: {fileID: 1622281514}
+  - component: {fileID: 1622281515}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -993,6 +980,26 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1622281515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622281510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ec0e2489b965c43a77d3c2f41e0ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelAsset: {fileID: 5022602860645237092, guid: c3de963ca2128db4080eb7db4808d53a, type: 3}
+  classesAsset: {fileID: 4900000, guid: cd8c84148a3f1c64cb492c2b21d0ac05, type: 3}
+  displayImage: {fileID: 1856741871}
+  borderTexture: {fileID: 2800000, guid: 7d1dcf9bf53c79b48beb7f86a89e82ec, type: 3}
+  font: {fileID: 12800000, guid: b25c290f49c73dd4baadb13f9a0a7add, type: 3}
+  webCamController: {fileID: 695934713}
+  iouThreshold: 0.5
+  scoreThreshold: 0.88
 --- !u!1 &1648529482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,8 +1216,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -245.13739, y: 64.194214}
-  m_SizeDelta: {x: 1088.9691, y: 612.54504}
+  m_AnchoredPosition: {x: -209.49, y: 0}
+  m_SizeDelta: {x: 640, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1856741871
 MonoBehaviour:
