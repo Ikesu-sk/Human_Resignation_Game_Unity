@@ -1291,6 +1291,7 @@ MonoBehaviour:
   storyText: {fileID: 1163723573}
   characterName: {fileID: 1063530640}
   soundManager: {fileID: 1418702906}
+  runYOLO: {fileID: 1622281515}
 --- !u!4 &1988434806
 Transform:
   m_ObjectHideFlags: 0
