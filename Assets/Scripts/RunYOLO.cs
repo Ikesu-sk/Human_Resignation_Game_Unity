@@ -139,29 +139,102 @@ public class RunYOLO : MonoBehaviour
         worker = new Worker(graph.Compile(coords, labelIDs), backend);
     }
 
+    // 「YOLOが止まった」ことを表す"stopped"というイベント（ベル）
+    public event Action stopped;
+
+    // 検出数を保存する変数。初期値は０
+    private int boxesFound = 0;
+    public int BoxesFound => boxesFound; // 外部読み取り用
+
+    // YOLO実行中か管理するフラグ
+    private bool isRunning = false;
+
+    // 外部公開用の読み取り専用プロパティ。左側が外部から読み取るための変数名、右側がその中身
+    public bool IsRunning => isRunning;
+
+    // StorManagerから呼び出す用の関数。呼び出されたら YOLO推論が開始される
+    public void StartYOLO()
+    {
+        isRunning = true;
+    }
+
+    public void StopYOLO()
+    {
+        isRunning = false;
+        // ClearAnnotations(); ←これをONにするとバウンディングボックスが表示されない可能性あり
+
+        //stoppedというイベント（ベル）を鳴らす
+        stopped?.Invoke();
+    }
+
     // 毎フレーム(今回は1秒間に60回)呼び出される関数
     private void Update()
     {
+        if (isRunning)
+        {
+            boxesFound = ExecuteML();
+            Debug.Log("ボックスの数：" + boxesFound);
+
+            // 検出が１つ以上あった場合
+            if (boxesFound > 0)
+            {
+                StopYOLO();
+            }
+        }
+        else if (isRunning == false && boxesFound > 0)
+        {
+            // 人が１人以上検出されている＆yolo推論も終了していた場合、これ以上何も表示させない
+        }
+        else
+        {
+            ImagePreview();
+        }
         // 毎フレーム、機械学習の推論を実行
-        ExecuteML();
+        // 
+        // ↑今回は storyManager.cs側で推論スイッチの切り替えを行う
     }
 
-    // 毎フレーム呼び出され、物体検出の一連のプロセスを実行する関数
-    public void ExecuteML()
+    // カメラ映像だけを表示させる関数
+    public void ImagePreview()
     {
-        // 前のフレームで描画したバウンディングボックスを非表示にする
-        ClearAnnotations();
-
         // WebCamControllerが設定されていて、カメラのテクスチャが利用可能な状態かチェックします。
-        if (webCamController == null && webCamController.CameraTexture == null && !webCamController.CameraTexture.isPlaying)
+        if (webCamController == null || webCamController.CameraTexture == null || !webCamController.CameraTexture.isPlaying)
         {
-            return;
+
         }
 
         // パフォーマンス向上のため、カメラ映像が更新されたフレームでのみ推論を実行します。
         if (!webCamController.CameraTexture.didUpdateThisFrame) //更新されていない場合はreturnを返すだけ
         {
-            return;
+
+        }
+
+        // webカメラのテクスチャを取得
+        var CameraTexture = webCamController.CameraTexture;
+
+        // これにより、アスペクト比を保ったまま、上下に黒帯が追加された640x640の画像が作られる。
+        float aspect = (float)CameraTexture.width / CameraTexture.height;
+        Graphics.Blit(CameraTexture, targetRT, new Vector2(1f / aspect, 1), new Vector2((aspect - 1f) / (2f * aspect), 0));
+        // UIのRawImageに結果を表示
+        displayImage.texture = targetRT;
+    }
+
+    // 物体検出の一連のプロセスを実行する関数
+    public int ExecuteML()
+    {
+        // 前のフレームで描画したバウンディングボックスを非表示にする
+        ClearAnnotations();
+
+        // WebCamControllerが設定されていて、カメラのテクスチャが利用可能な状態かチェックします。
+        if (webCamController == null || webCamController.CameraTexture == null || !webCamController.CameraTexture.isPlaying)
+        {
+            return 0; // カメラが使えないので検出数は0
+        }
+
+        // パフォーマンス向上のため、カメラ映像が更新されたフレームでのみ推論を実行します。
+        if (!webCamController.CameraTexture.didUpdateThisFrame) //更新されていない場合はreturnを返すだけ
+        {
+            return 0; // カメラが更新されていないので検出なし
         }
 
         // webカメラのテクスチャを取得
@@ -210,11 +283,13 @@ public class RunYOLO : MonoBehaviour
             };
 
             // 背景映像が反転しているので、ボックスのX座標も手動で反転させる
-            box.centerX *= -1; 
+            box.centerX *= -1;
 
             // ボックスを描画
             DrawBox(box, n, displayHeight * 0.05f);
         }
+
+        return boxesFound; //戻り値に、検出されたボックスの数を設定
     }
 
     // 検出結果を画面に表示するためのUI操作メゾッド（その１）
