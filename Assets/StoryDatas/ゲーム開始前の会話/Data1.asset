@@ -18,19 +18,19 @@ MonoBehaviour:
     StoryText: "\u3044\u3064\u307E\u3067\u93E1\u3092\u898B\u3066\u304A\u308B\u306E\u3058\u3083"
     CharacterName: "\u304A\u3058\u3044\u3061\u3083\u3093"
   - Background: {fileID: -3745511083504267619, guid: b72d8c55942d8e649b8c7169b761a303, type: 3}
-    CharacterImage: {fileID: 2253678213444760981, guid: 65b64a879bb3693479ae11ad454e5352, type: 3}
+    CharacterImage: {fileID: -6343217170269448804, guid: be0e7b7f4de76d240bdc8578d7266f8a, type: 3}
     StoryText: "\u51FA\u304B\u3051\u308B\u524D\u306E\u8EAB\u3060\u3057\u306A\u307F\u30C1\u30A7\u30C3\u30AF\u304B"
     CharacterName: "\u304A\u3058\u3044\u3061\u3083\u3093"
   - Background: {fileID: -3745511083504267619, guid: b72d8c55942d8e649b8c7169b761a303, type: 3}
-    CharacterImage: {fileID: 2253678213444760981, guid: 65b64a879bb3693479ae11ad454e5352, type: 3}
+    CharacterImage: {fileID: -6343217170269448804, guid: be0e7b7f4de76d240bdc8578d7266f8a, type: 3}
     StoryText: "\u3075\u3080\u3002\u4EBA\u3068\u3057\u3066\u306E\u898B\u304B\u3051\u306F\u60AA\u304F\u306A\u3044\u304C..."
     CharacterName: "\u304A\u3058\u3044\u3061\u3083\u3093"
   - Background: {fileID: -3745511083504267619, guid: b72d8c55942d8e649b8c7169b761a303, type: 3}
-    CharacterImage: {fileID: 2253678213444760981, guid: 65b64a879bb3693479ae11ad454e5352, type: 3}
+    CharacterImage: {fileID: -6343217170269448804, guid: be0e7b7f4de76d240bdc8578d7266f8a, type: 3}
     StoryText: "\u305B\u3063\u304B\u304F\u3058\u3083\u3002\u4E45\u3057\u3076\u308A\u306B\u304A\u524D\u306E\u529B\u3092\u78BA\u8A8D\u3057\u3066\u3084\u308B\u304B\u306E"
     CharacterName: "\u304A\u3058\u3044\u3061\u3083\u3093"
   - Background: {fileID: -3745511083504267619, guid: b72d8c55942d8e649b8c7169b761a303, type: 3}
-    CharacterImage: {fileID: 2253678213444760981, guid: 65b64a879bb3693479ae11ad454e5352, type: 3}
+    CharacterImage: {fileID: -6343217170269448804, guid: be0e7b7f4de76d240bdc8578d7266f8a, type: 3}
     StoryText: "\u307B\u308C\u3001\u4EBA\u5916\u306B\u306A\u3063\u3066\u307F\u308D"
     CharacterName: "\u304A\u3058\u3044\u3061\u3083\u3093"
   bgm: 0
