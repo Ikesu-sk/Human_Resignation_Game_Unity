@@ -1,21 +1,35 @@
-# Human_Resignation_Game_Unityfeature/2025-08-23
-2025年8月23日時点でのunityをベースとしたヒト辞任ゲームの進捗
+# Human_Resignation_Game_Unityfeature/2025-09-07
+2025年9月07日時点でのunityをベースとしたヒト辞任ゲームの進捗
+
+こちらのデータは9/6(土)に行われた生成AIなんでも展示会 Vol.4 にて出展したものです。
+https://techplay.jp/event/980351
 
 ## このデータの進捗状況
-- チュートリアル部分の完成
+- 一通り、ゲームを遊べる使用にした
 
-L 会話内容を最後まで作った
+L チュートリアル → ゲーム部分 → クリア部分 までを作成。よくあるゲームのデモ版レベルまで完成
 
-Ｌ 会話の途中でyolo認識を開始させる仕組みを作った。人を認識したらその認識した瞬間のカメラ画面で停止するようになっている
+Ｌ しかし展示中はPCの熱がこもりすぎたためかyoloが正しく機能せず、正常に遊ぶことができなかった。そのため処理を軽くするためにyoloモデルの変更やunityの描画設定の変更などを行う必要がある。
 
-- 会話パート：Enterで全文表示機能の改善
+## 今後の展望
+- 処理機能の改善
 
-L 前回の仕組みだとEnterを２回押しても反応しなかったので、8frameごとに１文字表示されるようにし、そのframeが増え続けているタイミングでEnterキーが押されたら、そのEnterキーを認識されるように改善。前回のだと0.1秒ごとに1回しかEnterを認識しない仕組みだった（のかもしれない）
+L yoloモデルの変更、unityの描画設定の変更など。PCを上位スペックのものにしたいが、Steam等でリリースすることを考えた際、極端に言えばCPUのみで機能するようなシステム要件にしたい
+
+- ゲーム体験の向上
+
+L 演出面：人外判定されたときに、そのときの画像を生成AIで加工して人外の姿にするとか
+
+L システム面：人外のほうが足が速くなるとか、複数の人外ポーズによって性能が変わるとか（それだとポーズゲーになってしまうから使えないかもしれないけど）
+
+- ネット上での配布
+
+L Vtuberでも遊べるようなゲームを作ってSteamで配布できたら面白そうだなと思った。欲を言えばアーケード版が欲しい。
 
 ## インストール方法
 ```bash
-git clone https://github.com/Ikesu-sk/Human_Resignation_Game_Unity.git
+git clone -b feature/2025-09-07 https://github.com/Ikesu-sk/Human_Resignation_Game_Unity.git
 ```
 ### 使い方（How to Use）
-インストールしたディレクトリ`Human_Resignation_Game_Unity`をunity hubで開く。
-その後、Assets > Scenes > Main を開けば参考動画と同じような画面が出てくる。
+git cloneしたディレクトリ`Human_Resignation_Game_Unity`をunity hubで [追加 > ディスクから加える] で開く。
+その後、Assets > Scenes > Main を開けばOK。
