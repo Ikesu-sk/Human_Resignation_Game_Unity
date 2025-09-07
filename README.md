@@ -5,7 +5,7 @@
 https://techplay.jp/event/980351
 
 ## このデータの進捗状況
-- 一通り、ゲームを遊べる使用にした
+- 一通りゲームを遊べるようにした
 
 L チュートリアル → ゲーム部分 → クリア部分 までを作成。よくあるゲームのデモ版レベルまで完成
 
@@ -32,4 +32,5 @@ git clone -b feature/2025-09-07 https://github.com/Ikesu-sk/Human_Resignation_Ga
 ```
 ### 使い方（How to Use）
 git cloneしたディレクトリ`Human_Resignation_Game_Unity`をunity hubで [追加 > ディスクから加える] で開く。
+
 その後、Assets > Scenes > Main を開けばOK。
