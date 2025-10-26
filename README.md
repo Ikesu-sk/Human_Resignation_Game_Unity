@@ -1,5 +1,4 @@
 # Human_Resignation_Game_Unityfeature/2025-10-26
-2025年8月6日時点でのunityをベースとしたヒト辞任ゲームの進捗
 
 ## このデータの進捗状況
 RunYOLOPOSEの仕組みを作成。
