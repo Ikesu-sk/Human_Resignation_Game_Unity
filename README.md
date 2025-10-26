@@ -1,4 +1,4 @@
-# Human_Resignation_Game_Unityfeature/2025-08-06
+# Human_Resignation_Game_Unityfeature/2025-10-16
 
 ## このデータの進捗状況
 人辞任ゲームの「ヒトを辞任したか判別する処理」の安定化が完了した。
